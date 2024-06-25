@@ -5,20 +5,37 @@
  */
 package allan.server.db.layers.DTO;
 
-public class Player {
+import jakarta.persistence.*;
 
+@Entity
+@Table (name = "player")
+public class Player {
+    @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     int id;
+    @Column
     String email;
+    @Column
     String password;
+    @Column
     String avatar;
+    @Column
     String name;
+    @Column
     String gender;
+    @Column
     int yearOfBirth;
+    @Column
     int score = 0; // gia tri mac dinh
+    @Column
     int matchCount = 0;
+    @Column
     int winCount = 0;
+    @Column
     int loseCount = 0;
+    @Column
     int currentStreak = 0; // số âm là chuỗi thua, dương là chuỗi thắng
+    @Column
     boolean blocked = false;
 
     public Player() {

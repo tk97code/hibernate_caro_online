@@ -5,17 +5,30 @@
  */
 package allan.server.db.layers.DTO;
 
+import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 
+@Entity
+@Table (name = "gamematch")
 public class GameMatch {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
+    @Column
     int playerID1;
+    @Column
     int playerID2;
+    @Column
     int winnerID;
+    @Column
     int playTime;
+    @Column
     int totalMove;
+    @Column
     LocalDateTime startedTime;
+    @Column
     String chat = "";
 
     public GameMatch(int id, int playerID1, int playerID2, int winnerID, int playTime, int totalMove, LocalDateTime startedTime, String chat) {
@@ -47,6 +60,10 @@ public class GameMatch {
         this.totalMove = g.totalMove;
         this.startedTime = g.startedTime;
         this.chat = g.chat;
+    }
+
+    public GameMatch() {
+
     }
 
     public int getId() {

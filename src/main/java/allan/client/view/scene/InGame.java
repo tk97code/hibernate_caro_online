@@ -29,8 +29,8 @@ import allan.shared.helper.CustumDateTimeFormatter;
 
 public class InGame extends javax.swing.JFrame {
 
-    final ImageIcon p1Icon = new ImageIcon(Avatar.ASSET_PATH + "icons8_round_24px.png");
-    final ImageIcon p2Icon = new ImageIcon(Avatar.ASSET_PATH + "icons8_delete_24px_1.png");
+    final ImageIcon p1Icon = new ImageIcon(getClass().getResource(Avatar.ASSET_PATH + "icons8_round_24px.png"));
+    final ImageIcon p2Icon = new ImageIcon(getClass().getResource(Avatar.ASSET_PATH + "icons8_delete_24px_1.png"));
 
     // https://codelearn.io/sharing/lam-game-caro-don-gian-bang-java
     final int COLUMN = 16, ROW = 16;
@@ -103,18 +103,18 @@ public class InGame extends javax.swing.JFrame {
         // player 1
         lbPlayerNameId1.setText(p1.getNameId());
         if (p1.getAvatar().equals("")) {
-            lbAvatar1.setIcon(new ImageIcon(Avatar.PATH + Avatar.EMPTY_AVATAR));
+            lbAvatar1.setIcon(new ImageIcon(getClass().getResource(Avatar.PATH + Avatar.EMPTY_AVATAR)));
         } else {
-            lbAvatar1.setIcon(new ImageIcon(Avatar.PATH + p1.getAvatar()));
+            lbAvatar1.setIcon(new ImageIcon(getClass().getResource(Avatar.PATH + p1.getAvatar())));
         }
 
         // player 2
         lbPlayerNameId2.setText(p2.getNameId());
-        lbAvatar2.setIcon(new ImageIcon(Avatar.PATH + Avatar.EMPTY_AVATAR));
+        lbAvatar2.setIcon(new ImageIcon(getClass().getResource(Avatar.PATH + Avatar.EMPTY_AVATAR)));
         if (p2.getAvatar().equals("")) {
-            lbAvatar2.setIcon(new ImageIcon(Avatar.PATH + Avatar.EMPTY_AVATAR));
+            lbAvatar2.setIcon(new ImageIcon(getClass().getResource(Avatar.PATH + Avatar.EMPTY_AVATAR)));
         } else {
-            lbAvatar2.setIcon(new ImageIcon(Avatar.PATH + p2.getAvatar()));
+            lbAvatar2.setIcon(new ImageIcon(getClass().getResource(Avatar.PATH + p2.getAvatar())));
         }
 
         // reset turn

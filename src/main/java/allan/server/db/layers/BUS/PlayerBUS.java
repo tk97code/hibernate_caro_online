@@ -8,11 +8,13 @@ package allan.server.db.layers.BUS;
 import allan.server.db.layers.DAL.PlayerDAL;
 import allan.server.db.layers.DTO.Player;
 import java.util.ArrayList;
+import java.util.List;
+
 import allan.shared.constant.Code;
 
 public class PlayerBUS {
 
-    ArrayList<Player> listPlayer = new ArrayList<>();
+    List<Player> listPlayer = new ArrayList<>();
     PlayerDAL playerDAL = new PlayerDAL();
 
     public PlayerBUS() {
@@ -77,15 +79,11 @@ public class PlayerBUS {
         return null;
     }
 
-    public ArrayList<Player> getList() {
+    public List<Player> getList() {
         return listPlayer;
     }
 
     public String checkLogin(String email, String password) {
-        // code vòng for như getByEmail là được, nhưng netbeans nó hiện bóng đèn sáng ấn vào thì ra code này
-        // thấy "ngầu" nên để lại :))
-        // return listPlayer.stream().anyMatch((p) -> (p.getEmail().equals(email) && p.getPassword().equals(password)));
-        // nhưng chợt nhận ra có block player nữa, nên phải trả về String chứ ko được boolean :(
 
         // check email
         Player p = getByEmail(email);

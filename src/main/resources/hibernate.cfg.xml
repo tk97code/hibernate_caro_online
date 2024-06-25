@@ -25,6 +25,7 @@
         <property name="show_sql">true</property>
 
         <!-- Entity mapping -->
-        <mapping class="allan.Test.testUser" />
+        <mapping class="allan.server.db.layers.DTO.Player" />
+        <mapping class="allan.server.db.layers.DTO.GameMatch" />
     </session-factory>
 </hibernate-configuration>

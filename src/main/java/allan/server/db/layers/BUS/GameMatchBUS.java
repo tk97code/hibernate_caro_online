@@ -8,10 +8,11 @@ package allan.server.db.layers.BUS;
 import allan.server.db.layers.DAL.GameMatchDAL;
 import allan.server.db.layers.DTO.GameMatch;
 import java.util.ArrayList;
+import java.util.List;
 
 public class GameMatchBUS {
 
-    ArrayList<GameMatch> listGameMatch = new ArrayList<>();
+    List<GameMatch> listGameMatch = new ArrayList<>();
     GameMatchDAL gameMatchDAL = new GameMatchDAL();
 
     public GameMatchBUS() {
@@ -114,7 +115,7 @@ public class GameMatchBUS {
         return (float) (100.00 * (calculateWinCount(playerId) / calculateTotalMatch(playerId)));
     }
 
-    public ArrayList<GameMatch> getList() {
+    public List<GameMatch> getList() {
         return listGameMatch;
     }
 }

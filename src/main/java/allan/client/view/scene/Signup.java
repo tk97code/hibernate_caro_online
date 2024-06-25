@@ -23,7 +23,7 @@ public class Signup extends javax.swing.JFrame {
         // avatar combobox
         cbAvatar.setMaximumRowCount(5);
         for (String s : Avatar.LIST) {
-            cbAvatar.addItem(new ImageIcon(Avatar.PATH + s));
+            cbAvatar.addItem(new ImageIcon(getClass().getResource(Avatar.PATH + s)));
         }
 
         // default is hidden
