@@ -428,6 +428,11 @@ public class InGame extends javax.swing.JFrame {
         btnUndo.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnUndo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_undo_24px.png"))); // NOI18N
         btnUndo.setText("Đánh lại");
+        btnUndo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUndoActionPerformed(evt);
+            }
+        });
 
         btnLeaveRoom.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnLeaveRoom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/icons8_exit_sign_24px.png"))); // NOI18N
@@ -749,6 +754,10 @@ public class InGame extends javax.swing.JFrame {
             btnSendMessageMouseClicked(null);
         }
     }//GEN-LAST:event_txChatInputKeyPressed
+
+    private void btnUndoActionPerformed(java.awt.event.ActionEvent evt) {
+
+    }
 
     private void btnLeaveRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLeaveRoomActionPerformed
         // https://stackoverflow.com/a/8689130

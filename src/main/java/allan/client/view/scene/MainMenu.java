@@ -443,7 +443,7 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        tpRoomAndUser.addTab("Người chơi", jPanel3);
+//        tpRoomAndUser.addTab("Người chơi", jPanel3);
 
         lbFoundMatch.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         lbFoundMatch.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
